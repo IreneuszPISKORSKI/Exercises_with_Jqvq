@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Ex 4.1 Processing character strings");
 
-        letters_in_names_for_each()
+        letters_in_names_for_each();
     }
 
     static void letters_in_names_for_each(){
@@ -16,10 +16,16 @@ public class Main {
         names.add("Irek");
 
         for (String name : names) {
+            describe(name);
+        }
+    }
+
+    static void describe(String name){
+        if (name.length()>=4){
             System.out.println(name + " - " + name.length() + " letters");
         }
     }
-    
+
     static void letters_in_names(){
         ArrayList<String> names = new ArrayList<String>();
         names.add("Jean");
@@ -32,7 +38,6 @@ public class Main {
             System.out.println(names.get(i) + " - " + names.get(i).length() + " letters");
         }
     }
-
 
     static void approximation_fibo(float approx) {
         System.out.println(approx);
