@@ -4,7 +4,23 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Ex 4.1 Processing character strings");
 
-        letters_in_names_for_each();
+        array_to_show_in_upper_case();
+    }
+
+    static void array_to_show_in_upper_case(){
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Jean");
+        names.add("Ahmed");
+        names.add("Lea");
+        names.add("Blanca");
+        names.add("Irek");
+        to_upper_case(names);
+    }
+
+    static void to_upper_case(ArrayList<String> names){
+        for (String name : names){
+            System.out.println(name.toUpperCase());
+        }
     }
 
     static void letters_in_names_for_each(){
