@@ -1,9 +1,25 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Ex 3. Fibonacci pt 2!");
-        double approx = 0.0000002;
-        approximation_fibo((float) approx);
+        System.out.println("Ex 4.1 Processing character strings");
+
+        letters_in_names();
     }
+
+    static void letters_in_names(){
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Jean");
+        names.add("Ahmed");
+        names.add("Lea");
+        names.add("Blanca");
+        names.add("Irek");
+
+        for (int i = 0; i < names.size(); i++) {
+            System.out.println(names.get(i) + " - " + names.get(i).length() + " letters");
+        }
+    }
+
 
     static void approximation_fibo(float approx) {
         System.out.println(approx);
