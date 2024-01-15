@@ -4,9 +4,22 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Ex 4.1 Processing character strings");
 
-        letters_in_names();
+        letters_in_names_for_each()
     }
 
+    static void letters_in_names_for_each(){
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("Jean");
+        names.add("Ahmed");
+        names.add("Lea");
+        names.add("Blanca");
+        names.add("Irek");
+
+        for (String name : names) {
+            System.out.println(name + " - " + name.length() + " letters");
+        }
+    }
+    
     static void letters_in_names(){
         ArrayList<String> names = new ArrayList<String>();
         names.add("Jean");
