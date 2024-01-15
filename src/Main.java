@@ -1,12 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Ex 2.1!");
-        smallest_square_super(36);
+        System.out.println("Ex 2.2!");
+        int n = 16;
+        smallest_square_super(n);
+        smallest_square_inferior(n);
     }
 
     static void smallest_square_super(int n){
         double square_root = Math.floor(Math.sqrt(n));
         int result = (int) Math.pow(square_root + 1, 2);
+        System.out.println("Smallest square superior to " + n + ":");
+        System.out.println( result );
+    }
+    static void smallest_square_inferior(int n){
+        double square_root = Math.floor(Math.sqrt(n));
+        int result = (int) Math.pow(square_root, 2);
+        if (result == n){
+            result = (int) Math.pow(square_root -1 , 2);
+        }
+        System.out.println("Smallest square inferior to " + n + ":");
         System.out.println( result );
     }
 
