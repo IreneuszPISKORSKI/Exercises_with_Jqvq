@@ -1,13 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Ex 4!");
-        System.out.println(" ");
-        enumerate_while();
-        System.out.println(" ");
-        enumerate_for();
-        System.out.println(" ");
-        enumerate_even();
+        System.out.println("Ex 2.1!");
+        smallest_square_super(36);
     }
+
+    static void smallest_square_super(int n){
+        double square_root = Math.floor(Math.sqrt(n));
+        int result = (int) Math.pow(square_root + 1, 2);
+        System.out.println( result );
+    }
+
     static void enumerate_while(){
         System.out.println("while:");
         int i = 1;
@@ -38,7 +40,7 @@ public class Main {
                 System.out.println(" ");
             }
         }
-        
+
         System.out.println(" ");
 
         System.out.println("Even numbers between 0 and 100 for j+=2");
