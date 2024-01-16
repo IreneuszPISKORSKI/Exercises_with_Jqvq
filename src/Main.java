@@ -2,31 +2,37 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Ex 4.1 Processing character strings");
+        int n = 11;
+        int f = 8;
+        double approx = 0.0001;
 
+        System.out.println("Ex 1 Suites de nombres simples");
+        enumerate_while();
+        enumerate_for();
+        enumerate_even();
+
+        System.out.println("Ex 2 Suites de nombres");
+        smallest_square_super(n);
+        smallest_square_inferior(n);
+
+        System.out.println("Ex 3 Suite de Fibonacci");
+        approximation_fibo((float) approx);
+        fibonacci(f);
+
+        System.out.println("Ex 4.1 Processing character strings");
+        array_to_show_in_upper_case();
+        letters_in_names_for_each();
+        letters_in_names();
+
+        System.out.println("Ex 5 Processing character strings");
         secret_message();
     }
 
     static void secret_message(){
-        String message = "000T000000000000000000000000000000o0000u00000000000j0o0000000u0000000000r00s0000\n" +
-                "c00o0000d00000e000000000000r000000000000000000\n" +
-                "00000c0000000000o000m00000000000000m0e000 000000000s00i0000000000 0l000e00000000\n" +
-                "g000000000000a00000000000000000r0s0000\n" +
-                "000000000000000000000000000q00000u0000000000000000000000000i00000000\n" +
-                "000f000i0ni00000r0000000a 000p00000a00000r0000000000000000000000000000000\n" +
-                "m00000000000000a000in0t000000e00n000000000i00r0000000000000000\n" +
-                "00000000000v00000000000o0000000t00r0000000e000000000 0c000o00d000000000e000000000\n" +
-                "00e0000000000000000000000000000000000s0t0000000000000000000 0000000000000u0n00000\n" +
-                "0000000000000000000000000000000ps00000000y000000000000000000c0h0000000op00000a0t000\n" +
-                "0h0e0\n" +
-                "000000000000000v00000000000i00000000000000000000000000000000000000o0000l0000en00t\n" +
-                "0000000q0u000000000i 00000000sa00000it00000 000où0000000000\n" +
-                "000000v0000000o0000000000u000000000000000s000000000000000000\n" +
-                "00000v00000000000000i00000000v0000000000000000000000000000e0000000000z0000000\n" +
-                "00(000000c0i0000000000000000000ta0ti0o00000000n 000000d000000000000000000e00\n" +
-                "00J000o00000000000000h0n00 0W00o000000000000o00000000000d0000000s0000000000)0.";
+        String message = "000T000000000000000000000000000000o0000u00000000000j0o0000000u0000000000r00s0000 c00o0000d00000e000000000000r000000000000000000 00000c0000000000o000m00000000000000m0e000 000000000s00i0000000000 0l000e00000000 g000000000000a00000000000000000r0s0000 000000000000000000000000000q00000u0000000000000000000000000i00000000 000f000i0ni00000r0000000a 000p00000a00000r0000000000000000000000000000000 m00000000000000a000in0t000000e00n000000000i00r0000000000000000 00000000000v00000000000o0000000t00r0000000e000000000 0c000o00d000000000e000000000 00e0000000000000000000000000000000000s0t0000000000000000000 0000000000000u0n00000 0000000000000000000000000000000ps00000000y000000000000000000c0h0000000op00000a0t000 0h0e0 000000000000000v00000000000i00000000000000000000000000000000000000o0000l0000en00t 0000000q0u000000000i 00000000sa00000it00000 000où0000000000 000000v0000000o0000000000u000000000000000s000000000000000000 00000v00000000000000i00000000v0000000000000000000000000000e0000000000z0000000 00(000000c0i0000000000000000000ta0ti0o00000000n 000000d000000000000000000e00 00J000o00000000000000h0n00 0W00o000000000000o00000000000d0000000s0000000000)0.";
 
         System.out.println(decrypt(message));
+        System.out.println(" ");
     }
 
     static String decrypt(String message){
@@ -41,6 +47,7 @@ public class Main {
         names.add("Blanca");
         names.add("Irek");
         to_upper_case(names);
+        System.out.println(" ");
     }
 
     static void to_upper_case(ArrayList<String> names){
@@ -60,6 +67,7 @@ public class Main {
         for (String name : names) {
             describe(name);
         }
+        System.out.println(" ");
     }
 
     static void describe(String name){
@@ -79,6 +87,7 @@ public class Main {
         for (int i = 0; i < names.size(); i++) {
             System.out.println(names.get(i) + " - " + names.get(i).length() + " letters");
         }
+        System.out.println(" ");
     }
 
     static void approximation_fibo(float approx) {
@@ -96,6 +105,7 @@ public class Main {
         }
         System.out.println("Res 1: " + fibo_one + ", Res 2: " + fibo_two);
         System.out.println("Error: " + Math.abs(res - (float)fibo ));
+        System.out.println(" ");
     }
 
     static void fibonacci(int n) {
@@ -114,6 +124,7 @@ public class Main {
         for (int j = 0; j < new_fibo.length; j++) {
             System.out.println("Position: " + j + ", value: " + new_fibo[j]);
         }
+        System.out.println(" ");
     }
 
     public static int[] add_int_to_array(int n, int[] old_arr, int add_int) {
@@ -131,6 +142,7 @@ public class Main {
         int result = (int) Math.pow(square_root + 1, 2);
         System.out.println("Smallest square superior to " + n + ":");
         System.out.println(result);
+        System.out.println(" ");
     }
 
     static void smallest_square_inferior(int n) {
@@ -138,6 +150,7 @@ public class Main {
         int result = (int) Math.pow(square_root - 1, 2);
         System.out.println("Smallest square inferior to " + n + ":");
         System.out.println(result);
+        System.out.println(" ");
     }
 
     static void enumerate_while() {
@@ -150,6 +163,7 @@ public class Main {
             }
             i++;
         }
+        System.out.println(" ");
     }
 
     static void enumerate_for() {
@@ -160,6 +174,7 @@ public class Main {
                 System.out.println(" ");
             }
         }
+        System.out.println(" ");
     }
 
     static void enumerate_even() {
@@ -182,5 +197,6 @@ public class Main {
                 System.out.println(" ");
             }
         }
+        System.out.println(" ");
     }
 }
